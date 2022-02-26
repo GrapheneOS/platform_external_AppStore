@@ -1,11 +1,19 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := app.grapheneos.apps_permission.xml
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_SYSTEM_EXT)/permissions
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
 LOCAL_MODULE := Apps
 LOCAL_MODULE_CLASS := APPS
-LOCAL_PRODUCT_MODULE := true
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_SYSTEM_EXT_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := prebuilt/Apps.apk
-
+LOCAL_REQUIRED_MODULES := app.grapheneos.apps_permission.xml
 include $(BUILD_PREBUILT)
