@@ -16,5 +16,6 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PRODUCT_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := prebuilt/Apps.apk
+LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.sidecar
 LOCAL_REQUIRED_MODULES := app.grapheneos.apps_permission.xml
 include $(BUILD_PREBUILT)
