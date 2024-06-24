@@ -1,0 +1,23 @@
+android_app_import {
+    name: "Apps",
+    product_specific: true,
+    privileged: true,
+
+    apk: "prebuilt/Apps.apk",
+    preprocessed: true,
+
+    optional_uses_libs: ["androidx.window.extensions", "androidx.window.sidecar"],
+
+    required: [
+        "privapp-permissions_app.grapheneos.apps.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions_app.grapheneos.apps.xml",
+    product_specific: true,
+
+    src:  "permissions/app.grapheneos.apps.xml",
+    sub_dir: "permissions",
+    filename_from_src: true,
+}
