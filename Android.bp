@@ -1,9 +1,9 @@
 android_app_import {
-    name: "Apps",
+    name: "AppStore",
     product_specific: true,
     privileged: true,
 
-    apk: "prebuilt/Apps.apk",
+    apk: "prebuilt/AppStore.apk",
     preprocessed: true,
 
     optional_uses_libs: ["androidx.window.extensions", "androidx.window.sidecar"],
